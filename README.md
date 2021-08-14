@@ -5,7 +5,9 @@
   **Method**: Finding the dominant colours in images using KMeans, calculating distances in Cielab colour space using the metric Cielab ΔE* CIEDE2000 to account for distances as perceived by the   human eye.<br />
   **In progress**: Automatically finding the nearest neighbours and save to output folder.<br />
   **Issues**: KMeans uses RGB colour space and euclidean metric, while ideally it'd use Lab space and ΔE*-metric. <br />
-  Current guess: Cost(making KMeans ΔE*-dependent or transforming input data accordingly to use Euclidean metrics)>>Loss(accuracy)
+  Is Cost(making KMeans ΔE*-dependent or transforming input data accordingly to use Euclidean metrics)>>Loss(accuracy)?
+  ![alt text](https://github.com/Kokostino/Personal_Projects/blob/master/cluster1.PNG?raw=true)<br />
+  **In progress**: Add serial killer data.<br />
 
 - **Animal_Attacks_in_North_America.ipynb**:<br />
   **Goal**: Get some idea about the local distribution of fatal animal attacks in North America.<br />
