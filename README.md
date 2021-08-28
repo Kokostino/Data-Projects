@@ -3,12 +3,14 @@
 - **Aesthetics.ipynb**:<br />
 
   **Goal**: Order images by similarity of their dominant colours for aesthetics.<br />
-  **Method**: Finding the dominant colours in images using KMeans, calculating distances in Cielab colour space using the metric Cielab ΔE* CIEDE2000 to account for distances as perceived by the   human eye.<br />
-  **In progress**: Automatically finding the nearest neighbours and save to output folder.<br />
-  **Issues**: KMeans uses RGB colour space and euclidean metric, while ideally it'd use Lab space and ΔE*-metric. <br />
-  Is Cost(making KMeans ΔE*-dependent or transforming input data accordingly to use Euclidean metrics)>>Loss(accuracy)?<br />
-  Example:<br />
-  The left side shows the original image, while the right depicts the dominant colours of the corresponding image clustered with KMeans and RGB.<br />
+  **Method**: Finding the dominant colours in images using KMeans, calculating distances in Cielab colour space using the metric Cielab ΔE* CIEDE2000 to account for distances as perceived by the human eye. Second KMeans clustering to find clusters of images which look aesthetically together colourwise.<br />
+  **In progress**: Currently, KMeans and RGB coordinates (having a euclidean metric) is used for finding the dominant colours in an image. Ideally one'd use Lab space and ΔE*-metric. So one has to 
+  - Find a coordinate transformation from LAB-ΔE* CIEDE2000 to euclidean. 
+  - Generalise KMeans to non euclidean metrics (distance and mean calculations need to be adjusted).<br />
+  or
+  - Use for instance KMediods for clustering which also works for non-euclidean distances.<br />
+  
+  The left side shows the original image, while the right depicts the dominant colours of the corresponding image clustered with KMeans and RGB. One can see that the dominant colours in the last image are particularly off, since perception of lighting is a major factor for using ciede2000.<br />
   ![alt text](https://github.com/Kokostino/Personal_Projects/blob/master/cluster1.PNG?raw=true)<br />
 
 - **Animal_Attacks_in_North_America.ipynb**:<br />
