@@ -18,4 +18,3 @@
 
 ![alt text](https://github.com/Kokostino/Personal_Projects/blob/master/map_animal_attacks.PNG?raw=true)<br />
   **In progress**: Add serial killer data. Scrape serial killer data, analyse it with nltk... <br />
-**Issues**: Data from Wikipedia tremendously lacks completeness regarding animal attacks.
